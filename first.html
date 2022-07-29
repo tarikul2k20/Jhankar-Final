@@ -9,17 +9,60 @@
         body{
             counter-reset: section;
         }
-        p::before{
+        .counter::before{
             counter-increment: section;
-            content: "Helllo" counter(section);
+            content: "Helllo " counter(section);
         }
-
+       
+        .box{
+            background-color: aliceblue;
+            width: 300px;
+            height: auto;
+        }
+        .inner1{
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+            transform: rotate(45deg) scale(.5);
+        }
+        .inner2{
+            background-color: red;
+            width: 200px;
+            height: 200px;
+        }
+        .inner3{
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+        }
     </style>
 </head>
 <body>
-    <p>amar sonar bangla</p>
-    <p>amar sonar bangla</p>
-    <p>amar sonar bangla</p>
-    <p>amar sonar bangla</p>
+    <p class="counter">amar sonar bangla</p>
+    <p class="counter">amar sonar bangla</p>
+    <form action="">
+        <fieldset>
+            <legend>Select your pitha </legend>
+            <p><label for="vapa"><input type="radio" name="pitha" id="vapa"> </label>Chitoi</p>
+            <p><label for="chitoi"><input type="radio" name="pitha" id="chitoi"> </label>Vapa</p>
+        </fieldset>
+        <fieldset>
+            <legend>vorta selec</legend>
+            <p> <label for="shutki"><input type="checkbox" id="shutki"></label> Shutki</p>
+            <p> <label for="alu"><input type="checkbox" id="alu"></label> Alu</p>
+            <button type="submit">Submit</button>
+            
+        </fieldset>
+    </form>
+    <div class="box">
+        <div class="inner1">box1</div>
+    </div>
+    <div class="box">
+        <div class="inner2">box2</div>
+    </div>
+    <div class="box">
+        <div class="inner3">box3</div>
+    </div>
+ 
 </body>
 </html>
